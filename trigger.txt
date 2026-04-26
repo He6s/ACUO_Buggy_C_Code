@@ -1,0 +1,5 @@
+# Benchmark 1 deterministic trigger
+ADD alpha one 30
+ADD bravo two 30
+ADD charlie three 30
+ADD delta four 30
