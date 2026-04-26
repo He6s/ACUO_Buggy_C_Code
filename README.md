@@ -1,33 +1,27 @@
-# Benchmark 1, cross module ownership bug
+# Benchmark 1: Cross Module Ownership
 
-This project builds a small key value cache that reads commands from a text file.
+Multi file C debugging benchmark.
 
-## Build
+Bug type:
+Cross module ownership violation
+
+Expected failure:
+Deterministic segfault during cache resize
+
+Build:
 
 ```bash
 make
 ```
 
-## Reproduce the crash
+Run:
 
 ```bash
 ./cachebench trigger.txt --trace
 ```
 
-The crash is deterministic with the provided trigger file.
+Notes:
 
-## Command format
-
-- `ADD <key> <value> <ttl>`
-- `FIND <key>`
-- `DEL <key>`
-- `DUMP`
-- `HELP`
-
-## Notes for benchmark runners
-
-- Compile with debug info already enabled by the Makefile.
-- The trace mode prints pointer values that are useful during debugging.
-- The provided trigger is intended to crash during a resize path, not during initial parsing.
-
-The evaluator notes are intentionally separated into `evaluator_notes.md`.
+* Crash site is not the root cause
+* Intended to require gdb heap and lifetime inspection
+* Evaluator notes are kept separately
