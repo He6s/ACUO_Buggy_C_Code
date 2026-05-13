@@ -1,0 +1,10 @@
+# Deterministic trigger for benchmark 2.
+# The early ADD commands store key pointers into the text buffer.
+ADD alpha first-record-before-growth
+ADD beta second-record-before-growth
+ADD gamma third-record-before-growth
+STATS
+FILL 5000000 x
+STATS
+GET alpha
+EXIT
