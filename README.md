@@ -1,7 +1,5 @@
 # Benchmark 1: Cross Module Ownership
 
-Multi file C debugging benchmark.
-
 Bug type:
 Cross module ownership violation
 
@@ -10,13 +8,19 @@ Deterministic segfault during cache resize
 
 # Benchmark 2: Realloc Interior Pointer Invalidation
 
-Multi file C debugging benchmark.
-
 Bug type:
 Realloc invalidates interior pointers kept by another module
 
 Expected failure:
 Deterministic segfault during index lookup after buffer growth
+
+# Benchmark 3: Parser Length Mismatch
+
+Bug type:
+Parser advances cursor using decoded payload length instead of declared raw input length
+
+Expected failure:
+Deterministic segfault during downstream parent analysis
 
 ---------------------------------------------
 Build:
