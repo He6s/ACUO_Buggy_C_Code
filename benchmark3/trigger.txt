@@ -1,0 +1,6 @@
+B3FRAME 1
+# Framewalk trigger for benchmark 3. The second node contains escaped data.
+NODE id=1 parent=0 keylen=4 key=root datalen=5 data=hello
+NODE id=2 parent=1 keylen=5 key=alpha datalen=170 data=%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41%41NODE id=77 parent=999 keylen=4 key=trap datalen=4 data=boom
+zzzzzzzz
+NODE id=3 parent=2 keylen=5 key=omega datalen=4 data=done
