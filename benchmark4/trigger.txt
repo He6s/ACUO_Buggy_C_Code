@@ -1,0 +1,13 @@
+# The 44-byte name overwrites HeaderFrame.parent_index and declared_nodes.
+ROUTE id=17 name_len=44 nodes=5 parent=none mode=direct
+NAME CentralStationRouteAlphaBeta007XZZZZYYYYMMMM
+NODE id=1 name=alpha weight=10
+NODE id=2 name=bravo weight=20
+NODE id=3 name=charlie weight=15
+NODE id=4 name=delta weight=12
+NODE id=5 name=echo weight=18
+SEG from=1 to=2 cost=8 label=walk
+SEG from=2 to=3 cost=9 label=rail
+SEG from=3 to=4 cost=7 label=bus
+SEG from=4 to=5 cost=11 label=walk
+END
