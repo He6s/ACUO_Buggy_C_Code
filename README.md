@@ -22,6 +22,14 @@ Parser advances cursor using decoded payload length instead of declared raw inpu
 Expected failure:
 Deterministic segfault during downstream parent analysis
 
+# Benchmark 4: Stackframe Corruption
+
+Bug type:
+Local stack buffer overwrite corrupts nearby stack frame fields
+
+Expected failure:
+Deterministic crash after corrupted stack metadata is used in a later module
+
 ---------------------------------------------
 Build:
 
