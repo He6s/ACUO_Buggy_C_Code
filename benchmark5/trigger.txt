@@ -1,0 +1,15 @@
+# eventmesh benchmark trigger
+# Format:
+# profile NAME [fail_closed|fail_open]
+# rule TOPIC ACTION TAG FLAGS
+# subscribe PROFILE TOPIC KIND FLAGS
+# message SEQUENCE TOPIC PAYLOAD FLAGS
+
+profile edge_filter fail_closed
+rule telemetry audit sensor_hot 0x10
+rule command allow operator_override 0x1
+rule audit audit slow_path 0x0
+subscribe edge_filter audit audit 0x0
+subscribe edge_filter telemetry filter 0x10
+message 0x41414141 audit warmup 0x0
+message 0x41414141 telemetry overheat 0x10
