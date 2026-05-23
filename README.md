@@ -30,6 +30,15 @@ Local stack buffer overwrite corrupts nearby stack frame fields
 Expected failure:
 Deterministic crash after corrupted stack metadata is used in a later module
 
+# Benchmark 5: Callback Signature Mismatch
+
+Bug type:
+Callback prototype mismatch causes the dispatcher to call a plugin handler with the wrong argument layout.
+
+Expected failure:
+Deterministic segfault during plugin event handling.
+
+
 ---------------------------------------------
 Build:
 
