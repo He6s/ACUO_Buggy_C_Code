@@ -1,0 +1,11 @@
+# Deterministic trigger for benchmark 6.
+# The template and field types agree. The failure is not an input type mismatch.
+ROW nightly-ingest
+FIELD string source edge-gateway-17
+FIELD string owner telemetry-pipeline
+FIELD flag healthy true
+FIELD uint retry_code 1
+FIELD string region apac-sin
+TEMPLATE ingest source:source:string owner:owner:string healthy:healthy:flag retry_code:retry:uint region:region:string
+DUMP
+EMIT ingest
