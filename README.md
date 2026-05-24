@@ -38,6 +38,14 @@ Callback prototype mismatch causes the dispatcher to call a plugin handler with 
 Expected failure:
 Deterministic segfault during plugin event handling.
 
+# Benchmark 6: Varargs Misuse
+
+Bug type:
+Varargs call site passes a pointer where the formatter expects a structured record pointer and integer width.
+
+Expected failure:
+Deterministic segfault during formatted metadata packing.
+
 
 ---------------------------------------------
 Build:
