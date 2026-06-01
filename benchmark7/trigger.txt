@@ -1,0 +1,12 @@
+# Deterministic trigger for Benchmark 7.
+# GRID_WIDTH * GRID_HEIGHT = 65600.
+# The parser stores that as uint32_t, but the table allocator narrows it to uint16_t.
+NAME nightly_icon_atlas
+TILE_WIDTH 32
+TILE_HEIGHT 32
+GRID_WIDTH 1025
+GRID_HEIGHT 64
+LAYERS 4
+SEED 424242
+CHECKPOINTS 6
+END ATLAS
