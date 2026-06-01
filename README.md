@@ -46,6 +46,14 @@ Varargs call site passes a pointer where the formatter expects a structured reco
 Expected failure:
 Deterministic segfault during formatted metadata packing.
 
+# Benchmark 7: Integer Truncation
+
+Bug type:
+Large parsed integer is truncated to a smaller allocation size, causing an undersized buffer.
+
+Expected failure:
+Deterministic segfault during tile encoding after writes exceed the allocated region.
+
 
 ---------------------------------------------
 Build:
