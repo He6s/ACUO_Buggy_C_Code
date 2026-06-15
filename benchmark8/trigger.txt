@@ -1,0 +1,9 @@
+# Corrupts task 202 after it is placed on the waiting intrusive list.
+task 101 ingest 4 Load_manifest
+task 202 render 9 Build_visible_route
+task 303 audit 2 Sweep_temp_files
+note 202 56 ABCDEFGHIJKLMNOPQRSTUVWXXXXYYYYYYYYYYYYYYYYZZZZZZZZZZZZZZZZ
+ready 101
+ready 202
+run
+dump
