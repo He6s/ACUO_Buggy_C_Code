@@ -54,6 +54,13 @@ Large parsed integer is truncated to a smaller allocation size, causing an under
 Expected failure:
 Deterministic segfault during tile encoding after writes exceed the allocated region.
 
+# Benchmark 8: Intrusive List Corruption
+
+Bug type:
+Intrusive list metadata is corrupted when one module links a task into the wrong queue state.
+
+Expected failure:
+Deterministic segfault during scheduler report traversal.
 
 ---------------------------------------------
 Build:
